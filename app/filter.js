@@ -18,20 +18,9 @@
             return text.split('h').join('').split('H').join('');
         };
     });
+    
 
-    app.filter('firstLetterUp', function ()
-    {
-        return function (text)
-        {
-            return text.replace(/([^\W_]+[^\s-]*) */g, function (text)
-            {
-                return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
-            });
-        };
-    });
-
-
-    app.controller('FilterCtrl', function ($scope)
+    app.controller("FilterCtrl", function ($scope)
     {
         $scope.data = {
             citation: 'To be, or not to be...',
